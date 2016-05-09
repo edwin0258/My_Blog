@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta title="author" content="Devin Miller">
+  <meta charset="utf-8">
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= stylesheet_link_tag "header" %>
+<header>
+  <div><%= link_to 'Devin Miller', root_url , class: "home" %></div>
+  <%= render 'link' %>
+</header>
+<div id="main">
+<%= yield %>
+</div>
+</body>
+</html>
