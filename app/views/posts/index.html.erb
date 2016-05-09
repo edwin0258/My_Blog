@@ -2,8 +2,16 @@
 <div class="posts">
     <% @posts.each do |post| %>
     <div class="post_container">
-        <%= post.title %>
-        <%= post.text %>
+        <div class="post_title">
+            <p class="title"><%= post.title%></p>
+            <p class="date"><%= post.created_at.strftime("%b %d, %y") %></p>
+        </div>
+        <div class="post_text">
+            &nbsp;&nbsp;&nbsp;&nbsp;<%= truncate(post.text, length: 1200, ommision: "..") %>
+        </div>
+        <div class="post_footer">
+            <%= link_to "Read More", post_path(post) %>
+        </div>
     </div>
     <% end %>
 </div>
