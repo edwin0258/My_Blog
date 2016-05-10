@@ -10,7 +10,8 @@
             &nbsp;&nbsp;&nbsp;&nbsp;<%= truncate(post.text, length: 1200, ommision: "..") %>
         </div>
         <div class="post_footer">
-            <%= link_to "Read More", post_path(post) %>
+            
+            <%= button_to "Read More", post_path(post), class:"more_btn", :method => :get %>
         </div>
     </div>
     <% end %>

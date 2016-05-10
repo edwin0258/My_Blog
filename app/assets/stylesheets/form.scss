@@ -1,0 +1,24 @@
+h1{
+    text-align:center;
+}
+.form{
+    width:600px;
+    margin:0 auto;
+    background-color:rgba(0,0,0,.2);
+    padding:10px;
+    border-radius:10px;
+    border:white 4px solid;
+    box-shadow:4px 4px 5px rgba(0,0,0,.2);
+}
+.field{
+    width:100%;
+    border-radius:2px;
+}
+.area{
+    height:300px;
+}
+.submit_btn{
+    height:30px;
+    width:100px;
+    background-color:green;
+}
