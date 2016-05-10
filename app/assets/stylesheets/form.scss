@@ -1,13 +1,18 @@
+@mixin transition{
+    -webkit-transition:.5s all;
+    transition:.5s all;
+}
 h1{
     text-align:center;
 }
 .form{
-    width:600px;
+    width:80%;
     margin:0 auto;
-    background-color:rgba(0,0,0,.2);
+    background-color:white;
     padding:10px;
+    padding-bottom:40px;
     border-radius:10px;
-    border:white 4px solid;
+    border:black 2px solid;
     box-shadow:4px 4px 5px rgba(0,0,0,.2);
 }
 .field{
@@ -16,9 +21,25 @@ h1{
 }
 .area{
     height:300px;
+    width:100%;
+    resize: vertical;
+    font-family:sans-serif;
+    font-size:16px;
 }
 .submit_btn{
+    @include transition;
     height:30px;
-    width:100px;
-    background-color:green;
+    width:40%;
+    margin-top:-5px;
+    margin-right:10px;
+    float:right;
+    background-color:rgb(255,105,97);
+    border:none;
+    cursor:pointer;
+    box-shadow:2px 2px 0px rgba(0,0,0,.2);
+}
+.submit_btn:hover{
+    margin-top:-3px;
+    margin-right:8px;
+    box-shadow:0px 0px 0px rgba(0,0,0,.2);
 }

@@ -1,7 +1,9 @@
-
-    <p>
-        <%= @post.title %>
-    </p>
-    <p>
-        <%= @post.text %>
-    </p>
+<%= stylesheet_link_tag "show" %>
+<div class="post">
+<h1 class="show_title">
+    <%= @post.title %>
+</h1>
+<p class="show_text">
+    &nbsp;&nbsp;&nbsp;&nbsp;<%= @post.text %>
+</p>
+</div>
