@@ -19,6 +19,19 @@ class PostsController < ApplicationController
             redirect_to root_url
         end
     end
+    def update
+        if current_user
+            @post = Post.find(params[:id])
+            
+            if @post.update_attributes(post_params)
+                redirect_to post_path(@post)
+            else
+                render 'edit'
+            end
+        else
+            redirect_to root_url
+        end
+    end
     def create
         if current_user
             @post = Post.new(post_params)
@@ -44,6 +57,6 @@ class PostsController < ApplicationController
     end
     private
         def post_params
-            params.require(:post).permit(:title,:text)
+            params.require(:post).permit(:title,:text,:image)
         end
 end

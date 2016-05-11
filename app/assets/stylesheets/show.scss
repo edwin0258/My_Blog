@@ -1,5 +1,5 @@
 
-.show_title,.show_text{
+.show_title,.show_text,.show_options{
     //width:100%;
     background-color:white;
     padding:20px;
@@ -13,6 +13,16 @@
 }
 .show_text{
     padding:20px;
+    padding-bottom:150px;
+}
+.show_options{
+    padding:10px;
+    width:100px;
+    text-align:center;
+}
+.image{
+    float:right;
+    height:150px;
 }
 .post{
     width:80%;
