@@ -15,6 +15,14 @@ header{
             color:black;
         }
     }
+    .username{
+        position:absolute;
+        margin-left:250px;
+    }
+    .logout{
+        position:absolute;
+        margin-left:180px;
+    }
     .article_link{
         @include transition;
         float:right;

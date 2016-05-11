@@ -3,28 +3,44 @@ class PostsController < ApplicationController
         @posts = Post.all
     end
     def new
-        @post = Post.new
+        if current_user
+            @post = Post.new
+        else
+            redirect_to root_url
+        end
     end
     def show
         @post = Post.find(params[:id])
     end
     def edit
+        if current_user
         @post = Post.find(params[:id])
+        else
+            redirect_to root_url
+        end
     end
     def create
-        @post = Post.new(post_params)
-        
-        if @post.save
-            redirect_to root_url
+        if current_user
+            @post = Post.new(post_params)
+            
+            if @post.save
+                redirect_to root_url
+            else
+                render 'new'
+            end
         else
-            render 'new'
+            redirect_to root_url
         end
     end
     def destroy
-        @post = Post.find(params[:id])
-        
-        @post.destroy
-        redirect_to root_url
+        if current_user
+            @post = Post.find(params[:id])
+            
+            @post.destroy
+            redirect_to root_url
+        else
+            redirect_to root_url
+        end
     end
     private
         def post_params
