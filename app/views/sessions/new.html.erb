@@ -1,19 +1,22 @@
-<% provide(:title, "Log in") %>
+<%= stylesheet_link_tag "form" %>
 
+<% provide(:title, "Log in") %>
+<div class="form">
 <%= form_for(:session, url: login_path) do |f| %>
     <p>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
+        <%= f.label :username %>
+        <%= f.text_field :username ,class: "field"%>
     </p>
     <p>
         <%= f.label :email %>
-        <%= f.email_field :email %>
+        <%= f.email_field :email , class: "field"%>
     </p>
     <p>
         <%= f.label :password %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, class: "field" %>
     </p>
     <p>
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in",class:"submit_btn" %>
     </p>
 <% end %>
+</div>
