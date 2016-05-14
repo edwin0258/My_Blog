@@ -1,4 +1,12 @@
 <%= stylesheet_link_tag "posts" %>
+<div class="topics">
+    <% @topics.each do |topic| %>
+    <div class="topic">
+       <img height="20px" src="https://cdn4.iconfinder.com/data/icons/32x32-free-design-icons/32/Folder.png">
+       <%= link_to topic.title, topic_path(topic),class: "topic_title" %>
+    </div>
+    <% end %>
+</div>
 <div class="posts">
     <% @posts.each do |post| %>
     <div class="post_container">

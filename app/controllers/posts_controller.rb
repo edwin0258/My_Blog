@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
     def index
-        @posts = Post.all
+        @posts = Post.all.order("created_at DESC")
+        @topics = Topic.all
     end
     def new
         if current_user
@@ -57,6 +58,6 @@ class PostsController < ApplicationController
     end
     private
         def post_params
-            params.require(:post).permit(:title,:text,:image)
+            params.require(:post).permit(:title,:text,:image,:topic_id)
         end
 end

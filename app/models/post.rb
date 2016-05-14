@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
                        length: { minimum: 5 }
     validates :text, presence: true, length: {minimum: 10 }
     validates :image, length: {maximum: 2000 }
+    belongs_to :topic
 end
