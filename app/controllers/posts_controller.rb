@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     def index
         @posts = Post.all.order("created_at DESC")
-        @topics = Topic.all
+        @topics = Topic.nested
     end
     def new
         if current_user

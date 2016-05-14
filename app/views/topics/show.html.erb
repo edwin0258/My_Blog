@@ -1,4 +1,8 @@
-<%= @topic.title %>
+<%= @topic.title %><br>
+<% @topics.each do |topic| %>
+    <img height="20px" src="https://cdn4.iconfinder.com/data/icons/32x32-free-design-icons/32/Folder.png">
+    <%=link_to topic.title, topic_path(topic) %>
+<% end %>
 <% @posts.each do |post| %>
     <br><%=link_to post.title, post_path(post) %>
 <% end %>
