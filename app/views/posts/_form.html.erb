@@ -11,7 +11,11 @@
     </p>
     <p>
         <%= f.label :image, class: "field" %>
-        <%= f.text_area :image,class: "field" %>
+        <%= f.text_field :image,class: "field" %>
+    </p>
+    <p>
+        <%= f.label :topic_id, class: "field" %>
+        <%= f.select :topic_id, options_from_collection_for_select(Topic.all, "id", "title"), include_blank: ("none") %>
     </p>
     <p>
         <%= f.submit 'Create' , :class => "submit_btn" %>
