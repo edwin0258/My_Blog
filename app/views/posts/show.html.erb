@@ -7,7 +7,7 @@
     <% if @post.image? %>
         <%=image_tag(@post.image, alt: "article image",class: "image")%>
     <% end %>
-    &nbsp;&nbsp;&nbsp;&nbsp;<%= @post.text %>
+    <%= (h @post.text).gsub("\n","<br/>").html_safe %>
 </p>
 </div>
 <% if logged_in? %>
