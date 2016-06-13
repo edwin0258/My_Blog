@@ -60,4 +60,39 @@ header{
         font-weight:bold;
     }
 }
+.topics{
+    overflow-y:none;
+    clear:both;
+    margin:-20px;
+    width:calc(100% + 40px);
+    height:40px;
+    padding:8px;
+    box-sizing:border-box;
+    margin-bottom:40px;
+    background-color:rgba(200,200,200,.2);
+}
+.topics .topic{
+    display:inline-block;
+}
+.topic{
+    margin-left:10px;
+}
+.topic_title{
+    text-decoration:none;
+    color:black;
+    line-height:25px;
+    background-color:white;
+    padding:5px;
+    padding-right:5px;
+    border-radius:2px;
+    font-size:14px;
+    border:1px solid rgba(0,0,0,.6);
+    box-shadow:inset 0px 0px 0px 4px rgba(0,0,0,.1);
+}
+@media only screen and (max-width:560px){
+    header .article_link{
+        margin-right:10px;
+    }
+    
+}
 

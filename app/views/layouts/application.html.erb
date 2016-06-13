@@ -22,7 +22,7 @@
       <p class="username"><%= current_user.username %></p>
       <p class="logout"><%= link_to "log out", logout_path , :method => :delete%></p>
     <% end %>
-    <%= render 'posts/link' %>
+      <%= render 'posts/link' %>
   </header>
   <div id="main">
   <%= yield %>

@@ -3,12 +3,16 @@
 <h1 class="show_title">
     <%= @post.title %>
 </h1>
-<p class="show_text">
+<div class="show_text">
     <% if @post.image? %>
         <%=image_tag(@post.image, alt: "article image",class: "image")%>
+        
     <% end %>
     <%= (h @post.text).gsub("\n","<br/>").html_safe %>
-</p>
+    <% if @post.image? %>
+        <div class="mobile"><br>Image: <br><%=link_to @post.image, "#{@post.image}" %></div>
+    <% end %>
+</div>
 </div>
 <% if logged_in? %>
 <p class="show_options">
