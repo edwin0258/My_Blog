@@ -14,7 +14,7 @@
  *= require_self
  */
 html{
-    background-color:rgba(230,220,210,.5);
+    background-image:url("background.jpg");
     margin:0px;
     padding:0px;
     font-family:sans-serif;
@@ -23,7 +23,6 @@ html{
 body{
     margin:0px;
     padding:0px;
-    
 }
 #main{
     padding:20px;

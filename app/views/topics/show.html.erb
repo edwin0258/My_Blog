@@ -1,9 +1,7 @@
 <%= stylesheet_link_tag "tree" %>
 <div class="topics">
-    <img height="20px" src="https://cdn4.iconfinder.com/data/icons/32x32-free-design-icons/32/Folder.png">
     <%= link_to "Home", posts_path,class: "topic_title" %>
     <% if @parent %>
-        <img height="20px" src="https://cdn4.iconfinder.com/data/icons/32x32-free-design-icons/32/Folder.png">
         <%= link_to @parent.title, topic_path(@parent),class: "topic_title" %>
     <% end %>
     
