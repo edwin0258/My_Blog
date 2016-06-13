@@ -17,22 +17,30 @@ html{
     background-image: image-url("background.jpg");
     margin:0px;
     padding:0px;
+    height:100%;
     font-family:sans-serif;
 }
 body{
     margin:0px;
     padding:0px;
+    height:100%;
 }
 #main{
     padding:20px;
 }
+.wrapper{
+    position:relative;
+    min-height:100%;
+}
 footer{
     width:100%;
-    background-color:White;
-    padding-left:10px;
-    padding-right:10px;
+    background-color:rgba(255,255,255,.5);
+    margin-top:10px;
+    padding: 0px 10px;
     font-size:12px;
     box-sizing:border-box;
+    position:absolute;
+    bottom:0;
     *{
         display:inline-block;
     }

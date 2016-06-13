@@ -9,21 +9,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= stylesheet_link_tag "header" %>
-<header>
-  <div><%= link_to 'Devin Miller', root_url , class: "home" %></div>
-  <% if logged_in? %>
-    <p class="username"><%= current_user.username %></p>
-    <p class="logout"><%= link_to "log out", logout_path , :method => :delete%></p>
-  <% end %>
-  <%= render 'posts/link' %>
-</header>
-<div id="main">
-<%= yield %>
+<div class="wrapper">
+  <%= stylesheet_link_tag "header" %>
+  <header>
+    <div><%= link_to 'Devin Miller', root_url , class: "home" %></div>
+    <% if logged_in? %>
+      <p class="username"><%= current_user.username %></p>
+      <p class="logout"><%= link_to "log out", logout_path , :method => :delete%></p>
+    <% end %>
+    <%= render 'posts/link' %>
+  </header>
+  <div id="main">
+  <%= yield %>
+  </div>
+  </br>
+  <footer>
+    <p><%= link_to 'Home', root_url , class: "home" %></p>
+    <p class="copy">Copyright &copy; Devin Miller 2016</p>
+  </footer>
 </div>
-<footer>
-  <p><%= link_to 'Home', root_url , class: "home" %></p>
-  <p class="copy">Copyright &copy; Devin Miller 2016</p>
-</footer>
 </body>
 </html>
