@@ -18,11 +18,9 @@
 }
 .posts{
     @include transition;
-    //background-color:black;
-    height:1000px;
+    overflow:auto;
     width:1046px;
     margin:0 auto;
-    //padding-left:5%;
     box-sizing:border-box;
     
     & div:nth-child(2n+1){
